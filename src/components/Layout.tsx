@@ -25,11 +25,11 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
 
   return (
     <div className="min-h-screen bg-white font-sans">
-      <header className="border-b border-gray-100 sticky top-0 bg-white z-50">
+      <header className="border-b border-orange-100 sticky top-0 bg-white z-50 shadow-sm shadow-orange-50">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <button
             onClick={() => handleNav("home")}
-            className="text-sm font-700 tracking-widest uppercase text-gray-900 hover:text-gray-500 transition-colors"
+            className="text-sm font-bold tracking-widest uppercase text-orange-500 hover:text-orange-400 transition-colors"
           >
             ТП·Помощник
           </button>
@@ -41,8 +41,8 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
                 onClick={() => handleNav(item.id)}
                 className={`text-sm transition-colors ${
                   currentPage === item.id
-                    ? "text-gray-900 font-600"
-                    : "text-gray-400 hover:text-gray-900"
+                    ? "text-orange-500 font-semibold"
+                    : "text-gray-400 hover:text-orange-500"
                 }`}
               >
                 {item.label}
@@ -51,7 +51,7 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
           </nav>
 
           <button
-            className="md:hidden text-gray-900"
+            className="md:hidden text-orange-500"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <Icon name={menuOpen ? "X" : "Menu"} size={20} />
@@ -59,15 +59,15 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
         </div>
 
         {menuOpen && (
-          <div className="md:hidden border-t border-gray-100 bg-white animate-fade-in">
+          <div className="md:hidden border-t border-orange-100 bg-white animate-fade-in">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNav(item.id)}
-                className={`w-full text-left px-6 py-4 text-sm border-b border-gray-50 transition-colors ${
+                className={`w-full text-left px-6 py-4 text-sm border-b border-orange-50 transition-colors ${
                   currentPage === item.id
-                    ? "text-gray-900 font-600 bg-gray-50"
-                    : "text-gray-500 hover:text-gray-900"
+                    ? "text-orange-500 font-semibold bg-orange-50"
+                    : "text-gray-500 hover:text-orange-500 hover:bg-orange-50"
                 }`}
               >
                 {item.label}
@@ -79,9 +79,9 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
 
       <main>{children}</main>
 
-      <footer className="border-t border-gray-100 mt-20">
+      <footer className="border-t border-orange-100 mt-20 bg-orange-50">
         <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="text-xs text-gray-400 tracking-widest uppercase">ТП·Помощник</span>
+          <span className="text-xs text-orange-400 tracking-widest uppercase font-semibold">ТП·Помощник</span>
           <span className="text-xs text-gray-400">© 2026</span>
         </div>
       </footer>

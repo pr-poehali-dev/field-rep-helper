@@ -18,13 +18,13 @@ export default function About() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
       <div className="mb-12 animate-fade-in">
-        <p className="text-xs text-gray-400 tracking-widest uppercase mb-4">Информация</p>
+        <p className="text-xs text-orange-400 tracking-widest uppercase mb-4 font-semibold">Информация</p>
         <h1 className="text-5xl font-black text-gray-900 leading-none">О компании</h1>
       </div>
 
       <div className="grid md:grid-cols-2 gap-12">
         <div className="animate-fade-in" style={{ animationDelay: '0.1s', opacity: 0 }}>
-          <h2 className="text-xs font-700 tracking-widest uppercase text-gray-400 mb-6 pb-3 border-b border-gray-100">
+          <h2 className="text-xs font-bold tracking-widest uppercase text-orange-400 mb-6 pb-3 border-b border-orange-100">
             Описание
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -50,7 +50,7 @@ export default function About() {
 
         <div className="space-y-8">
           <div className="animate-fade-in" style={{ animationDelay: '0.2s', opacity: 0 }}>
-            <h2 className="text-xs font-700 tracking-widest uppercase text-gray-400 mb-4 pb-3 border-b border-gray-100">
+            <h2 className="text-xs font-bold tracking-widest uppercase text-orange-400 mb-4 pb-3 border-b border-orange-100">
               Контакты
             </h2>
             <div className="space-y-3">
@@ -64,7 +64,7 @@ export default function About() {
           </div>
 
           <div className="animate-fade-in" style={{ animationDelay: '0.3s', opacity: 0 }}>
-            <h2 className="text-xs font-700 tracking-widest uppercase text-gray-400 mb-4 pb-3 border-b border-gray-100">
+            <h2 className="text-xs font-bold tracking-widest uppercase text-orange-400 mb-4 pb-3 border-b border-orange-100">
               Реквизиты
             </h2>
             <div className="space-y-3">
@@ -79,10 +79,10 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-12 p-8 bg-gray-900 animate-fade-in" style={{ animationDelay: '0.4s', opacity: 0 }}>
-        <p className="text-xs text-gray-400 tracking-widest uppercase mb-2">Ваш менеджер</p>
+      <div className="mt-12 p-8 bg-orange-500 rounded-xl animate-fade-in" style={{ animationDelay: '0.4s', opacity: 0 }}>
+        <p className="text-xs text-orange-100 tracking-widest uppercase mb-2 font-semibold">Ваш менеджер</p>
         <p className="text-white text-2xl font-black">Иван Иванов</p>
-        <p className="text-gray-400 mt-1">+7 (000) 000-00-00 · ivan@company.ru</p>
+        <p className="text-orange-100 mt-1">+7 (000) 000-00-00 · ivan@company.ru</p>
       </div>
     </div>
   );

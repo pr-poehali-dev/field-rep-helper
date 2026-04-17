@@ -29,7 +29,7 @@ export default function Price() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
       <div className="mb-12 animate-fade-in">
-        <p className="text-xs text-gray-400 tracking-widest uppercase mb-4">Документы</p>
+        <p className="text-xs text-orange-400 tracking-widest uppercase mb-4 font-semibold">Документы</p>
         <h1 className="text-5xl font-black text-gray-900 leading-none">Прайс-лист</h1>
         <p className="mt-4 text-gray-400">Актуальные цены · Апрель 2026</p>
       </div>
@@ -42,8 +42,8 @@ export default function Price() {
               <span>{section.category}</span>
             </h2>
 
-            <div className="border border-gray-100 overflow-hidden">
-              <div className="grid grid-cols-12 bg-gray-900 text-white text-xs font-600 tracking-widest uppercase">
+            <div className="border border-orange-100 overflow-hidden rounded-xl">
+              <div className="grid grid-cols-12 bg-orange-500 text-white text-xs font-semibold tracking-widest uppercase">
                 <div className="col-span-5 px-4 py-3">Наименование</div>
                 <div className="col-span-2 px-4 py-3 hidden md:block">Артикул</div>
                 <div className="col-span-2 px-4 py-3 text-right">Цена, ₽</div>
@@ -54,7 +54,7 @@ export default function Price() {
               {section.rows.map((row, i) => (
                 <div
                   key={row.article}
-                  className={`grid grid-cols-12 text-sm border-t border-gray-50 hover:bg-gray-50 transition-colors ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}
+                  className={`grid grid-cols-12 text-sm border-t border-orange-50 hover:bg-yellow-50 transition-colors ${i % 2 === 0 ? 'bg-white' : 'bg-orange-50/40'}`}
                 >
                   <div className="col-span-5 px-4 py-4 text-gray-900 font-500">{row.name}</div>
                   <div className="col-span-2 px-4 py-4 text-gray-400 hidden md:block">{row.article}</div>
@@ -74,8 +74,8 @@ export default function Price() {
           { label: "НДС", value: "Включён в цену" },
           { label: "Срок действия", value: "До 01.07.2026" },
         ].map((info) => (
-          <div key={info.label} className="p-5 bg-gray-50 border border-gray-100">
-            <p className="text-xs text-gray-400 tracking-widest uppercase mb-1">{info.label}</p>
+          <div key={info.label} className="p-5 bg-orange-50 border border-orange-100 rounded-xl">
+            <p className="text-xs text-orange-400 tracking-widest uppercase mb-1 font-semibold">{info.label}</p>
             <p className="text-gray-900 font-600 text-sm">{info.value}</p>
           </div>
         ))}

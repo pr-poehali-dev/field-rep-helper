@@ -37,7 +37,7 @@ export default function Food() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
       <div className="mb-12 animate-fade-in">
-        <p className="text-xs text-gray-400 tracking-widest uppercase mb-4">Категория</p>
+        <p className="text-xs text-orange-400 tracking-widest uppercase mb-4 font-semibold">Категория</p>
         <h1 className="text-5xl font-black text-gray-900 leading-none">🥫 Продукты питания</h1>
         <p className="mt-4 text-gray-400">Полный ассортимент для вашего клиента</p>
       </div>
@@ -45,7 +45,7 @@ export default function Food() {
       <div className="space-y-10">
         {products.map((group, i) => (
           <div key={group.category} className="animate-fade-in" style={{ animationDelay: `${i * 0.1}s`, opacity: 0 }}>
-            <h2 className="text-xs font-700 tracking-widest uppercase text-gray-400 mb-4 pb-3 border-b border-gray-100">
+            <h2 className="text-xs font-bold tracking-widest uppercase text-orange-400 mb-4 pb-3 border-b border-orange-100">
               {group.category}
             </h2>
             <div className="space-y-1">
@@ -66,8 +66,8 @@ export default function Food() {
         ))}
       </div>
 
-      <div className="mt-12 p-6 bg-gray-50 border border-gray-100">
-        <p className="text-xs text-gray-400 tracking-widest uppercase mb-2">Минимальный заказ</p>
+      <div className="mt-12 p-6 bg-orange-50 border border-orange-100 rounded-xl">
+        <p className="text-xs text-orange-400 tracking-widest uppercase mb-2 font-semibold">Минимальный заказ</p>
         <p className="text-gray-900 font-600">Уточните у менеджера актуальные условия поставки</p>
       </div>
     </div>
