@@ -26,7 +26,7 @@ export const api = {
   },
 
   getCategories: async (): Promise<Category[]> => {
-    const res = await fetch(`${BASE}/categories`);
+    const res = await fetch(`${BASE}?type=categories`);
     return res.json();
   },
 

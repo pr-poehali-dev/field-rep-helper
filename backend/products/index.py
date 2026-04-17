@@ -40,7 +40,7 @@ def handler(event: dict, context) -> dict:
 
     try:
         # --- CATEGORIES ---
-        if "categories" in path:
+        if "categories" in path or params.get("type") == "categories":
             if method == "GET":
                 cur.execute(f"SELECT id, name, emoji, slug FROM {SCHEMA}.categories ORDER BY id")
                 rows = cur.fetchall()

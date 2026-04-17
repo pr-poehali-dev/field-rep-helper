@@ -8,8 +8,8 @@ export default function Price() {
 
   useEffect(() => {
     Promise.all([api.getProducts(), api.getCategories()]).then(([p, c]) => {
-      setProducts(p);
-      setCategories(c);
+      setProducts(Array.isArray(p) ? p : []);
+      setCategories(Array.isArray(c) ? c : []);
       setLoading(false);
     });
   }, []);
