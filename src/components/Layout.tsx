@@ -31,7 +31,7 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
             onClick={() => handleNav("home")}
             className="text-sm font-bold tracking-widest uppercase text-orange-500 hover:text-orange-400 transition-colors"
           >
-            ТП·Помощник
+            ИП Гаврилова Долосков
           </button>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -81,7 +81,7 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
 
       <footer className="border-t border-orange-100 mt-20 bg-orange-50">
         <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="text-xs text-orange-400 tracking-widest uppercase font-semibold">ТП·Помощник</span>
+          <span className="text-xs text-orange-400 tracking-widest uppercase font-semibold">ИП Гаврилова Долосков</span>
           <span className="text-xs text-gray-400">© 2026</span>
         </div>
       </footer>
