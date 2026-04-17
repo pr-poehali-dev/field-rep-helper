@@ -16,6 +16,7 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
     { id: "food", label: "Продукты питания" },
     { id: "price", label: "Прайс-лист" },
     { id: "about", label: "О компании" },
+    { id: "admin", label: "⚙ Управление" },
   ];
 
   const handleNav = (id: string) => {
